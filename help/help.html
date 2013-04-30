@@ -1,0 +1,170 @@
+<html><head>
+<title>HELP -- TENDS Editor</title>
+</head>
+
+<body bgcolor="#ffffff">
+<a name="up"><h1 align="center"><font color="#008000"><b><u>TENDS Helpdesk</u></b></font></h1></a>
+<center>
+<h3><font color="#FF0000">TENDS Editor&nbsp; v1.4<br>
+--By Anurag Patel<br>
+Third Year of Engineering<br>
+Department of Instrumentation<br>
+SIGCOE - Vashi
+</font>
+
+</h3>
+
+<p>&nbsp;
+</p>
+
+</center>
+<hr>
+<h3>
+
+<font color="#008000">Help Topics</font>
+
+</h3>
+<ul>
+	<li><a href=#import>Importing a file with TENDS Server</a>
+    <li><a href=#html>Working with HTML / RTF Browser</a>
+    <li><a href=#image>Working with Image Viewer</a>
+    <li><a href=#zip>Compressing Files</a>
+    <li><a href=#lf>Changing Look &amp; Feel</a>
+    <li><a href=#other>Unknown Problems</a>
+</ul>
+<hr>
+<a name="import"><h2><font color="#008000">Importing Files using TENDS Server</font></h2></a>
+<blockquote>
+    The TENDS Server has been designed so that it can carter to the needs of as
+    many people as the network can support. ie. it is Multi-Threaded.
+    <p>&nbsp;<img src="Server.gif"></p>
+    <ul>
+      <li>
+        <p align="left">1) First go to the machine on which the file is located.
+        (It
+    may be LINUX machine also).<br>
+        This machine will act as the Server and all the clients will connect to
+        this machine to fetch the required file which is present on this
+        machine.<br>
+        &nbsp;&nbsp;&nbsp; Any Computer that has the file which is to be
+        transferred has to act as the Server.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; On that machine , move to the Server directory
+        by typing...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        cd TENDS\server</li>
+      <li>
+        <p align="left">2)Now execute the server by giving the
+    command.....<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <i>java TENDSServer&nbsp;&nbsp;&nbsp; (Windows)<br>
+    &nbsp;&nbsp;&nbsp; or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /usr/java/bin/java
+    TENDSServer&nbsp;&nbsp; (LINUX)</i><br>
+    &nbsp;</li>
+      <li>
+        <p align="left">3)&nbsp; Now from the client machine run the TENDS Editor
+    and go to...<br>
+    &nbsp;Features &gt; Import Manager &gt; Import a File. A dialog box similar
+    to above one will pop up. Fill in the IP Address of the Server. By default
+    it is&nbsp; 127.0.0.1&nbsp; NOTE: For Windows NT Networks you may use the
+    WINS naming conventions&nbsp;&nbsp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eg.&nbsp; MR1-PDC (Do not use
+        \\MR1-PDC).</li>
+      <li>
+        <p align="left">4) The Server runs on the port&nbsp; 5998 by default so the
+    slider provided will not work.</li>
+      <li>
+        <p align="left">5)&nbsp; Next fill up the File name of the file you want to
+    import. It is important to fill the FULL filename of the file you wish to
+    import<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eg.&nbsp;D:\My Documents\Text
+    file.txt&nbsp;&nbsp; (Windows)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    /home/anurag/documents/text.txt&nbsp; (LINUX)</li>
+      <li>
+        <p align="left">6) The TENDS Server displays all the infprmation about
+        the Connection attempts made, files reequested , IP of client etc...</li>
+    </ul>
+    <p align="left"><font color="#FF0000">WARNING :&nbsp;</font><br>Generally
+    almost all of the Linux distributions come with some form of Free Security
+    Packages like Firewalls etc. As you know , Firewalls are supposed to Block
+    all of the Incoming/Outgoing traffic, so any attempt to connect to a Linux
+    Server protected by a firewall will Crash TENDS Editor.<br>
+    &nbsp;&nbsp;&nbsp; If you want to connect to the Linux Server then first
+    disable the firewall and make sure that the port 5998 is not blocked and
+    then import the file using the client TENDS Editor.
+</blockquote>
+<hr>
+<a name=html><h2><font color="#008000">Working with HTML / RTF Browser</font></h2></a>
+<blockquote>
+    CAUTION : The HTML / RTF Browser supports PURE HTML formatted files. Html
+    files with other contents like DHTML / Scriptings / Applets may crash TENDS
+    <ul>
+      <li>Normally HTML / RTF browser has very good support for Html and to some
+        extent it can load standard Rich Text Format (RTF) Files with great
+        accuracy.</li>
+      <li>HTML Browser also supports Hyperlinks but they should not point to
+        Internet.</li>
+      <li>To Edit HTML Files press&nbsp; F4 on the keyboard. This will open the
+        file in the Text Viewer.</li>
+      <li>To load a new file press&nbsp; F3&nbsp; or go to&nbsp; File &gt; Open</li>
+    </ul>
+</blockquote>
+<hr>
+<a name="image"><h2><font color="#008000">TENDS Image Viewer</font></h2></a>
+<blockquote>
+
+<p>TENDS Image viewer is a light weight image viewer which can load files of
+type
+    <ul>
+      <li>GIF&nbsp; (Graphic Interchange Format)</li>
+      <li>JPG / JPEG&nbsp; (Joint Photographic Experts Group)</li>
+      <li>PNG&nbsp; (Public Networks Graphics)</li>
+    </ul>
+    <ol>
+      <li>To open an Image press&nbsp; F3&nbsp; or go to&nbsp; File &gt; Open</li>
+      <li>To clear the Image press&nbsp; F5</li>
+    </ol>
+
+</blockquote>
+<hr>
+<h2>
+<a name="zip"><font color="#008000">File Compression</font></a></h2>
+<blockquote>
+  <p>TENDS Supports File Compression also. The files are compressed using standard
+ZIP format. These compressed files can then be opened using any Extraction
+  utility&nbsp; eg WINZIP / WINRAR / PKZIP etc...</p>
+  <p>CAUTION : The files to be compressed MUST be in ASCII / Text format. Binary
+  files like Program Files / Images / Media files get corrupt during the
+  compression</p>
+</blockquote>
+<hr>
+<blockquote>
+<a name="lf"><h2><font color="#008000">Dynamic Look & Feel</font></h2>
+<p>TENDS supports PLAF (Pluggable Look And Feel)<br>
+Look &amp; Feel supported by TENDS are...
+<ul>
+  <li>Metal (Java Default) Swing UI Toolkit</li>
+  <li>Motif (Linux / GNOME) Motif UI Toolkit</li>
+  <li>Windows (Microsoft)&nbsp; Win32 UI Toolkit</li>
+  <li>Macintosh (Apple)&nbsp;</li>
+</ul>
+
+</blockquote>
+
+<hr>
+<a name="other"><h2><font color="#008000">Bug Reports and Feedback</font></h2>
+<p>TENDS Editor is constantly under renovation and all the care has been taken
+to catch the Exceptions.<br>
+But if still any exception slips out then kindly inform me.</p>
+<p>&nbsp;&nbsp;&nbsp; If you have just found out an unknown bug then kindly E-mail me to...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+terminal_anu@rediffmail.com</i></p>
+</a>
+<hr>
+<small>The TENDS Editor, is developed by Anurag Patel.<br>
+Copyright &copy; 2002, Anurag Patel.
+<br>
+Smt. Indira Gandhi College of Engineering
+<br>
+Sector 16 Koparkhairne</small>&nbsp; New Mumbai<small>.</small>
+</body></html>
